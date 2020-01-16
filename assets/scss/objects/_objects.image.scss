@@ -1,0 +1,73 @@
+/*------------------------------------*\
+  #IMAGE
+\*------------------------------------*/
+
+.image {
+  display: flex;
+  justify-content: center;
+  height: 45vw;
+  max-height: 750px;
+  position: relative;
+  overflow: hidden;
+
+  &--cut-right {
+    margin: {
+      right: 12vw;
+    }
+  }
+
+  &--cut {
+    margin: {
+      left: 6rem;
+      right: 6rem;
+    }
+  }
+
+  &.js-reveal {
+    position: relative;
+    overflow: hidden;
+
+    &:after,
+    &:before {
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    &:after {
+      background: #202020;
+    }
+
+    &.animated {
+      &:before {
+        background: #110f10;
+        animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1) both;
+        z-index: 2;
+      }
+      &:after {
+        animation: revealBack 2s cubic-bezier(0.77, 0, 0.175, 1) both;
+      }
+    }
+  }
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes revealBack {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

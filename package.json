@@ -1,0 +1,32 @@
+{
+  "name": "nourseofcourse",
+  "version": "1.0.0",
+  "description": "Nuxt application for nourseofcourse.com",
+  "author": "Brandon Nourse",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@vivid-web/flexboxgrid-vue": "^1.0.5",
+    "gsap": "^2.0.2",
+    "headroom.js": "^0.10.3",
+    "jarallax": "^1.12.0",
+    "jquery": "^3.4.1",
+    "nuxt": "^2.0.0",
+    "swiper": "^5.2.1",
+    "vue-scrollmagic": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.16.4",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2"
+  }
+}

@@ -1,0 +1,24 @@
+.card {
+
+  &__image {
+    display: flex;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 600px;
+    }
+  }
+
+  &__body {
+    padding: {
+      top: 3.2rem;
+      left: 3.2rem;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+}

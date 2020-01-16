@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  #CUSTOM
+\*------------------------------------*/
+
+/**
+ * This file contains any additional or override CSS for the Custom theme: any
+ * customisations that can’t be handled by `_settings.custom.scss`.
+ */
+
+@font-face {
+    font-family: 'gilroy';
+    src: url('gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'gilroy';
+    src: url('gilroy-light-webfont.woff2') format('woff2'),
+         url('gilroy-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}

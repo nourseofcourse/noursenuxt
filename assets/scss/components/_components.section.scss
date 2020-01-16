@@ -1,0 +1,23 @@
+.section {
+  padding: {
+    top: 6.4rem;
+    bottom: 3.5rem
+  }
+
+  &--stacked {
+    padding: {
+      top: 0;
+    }
+  }
+
+  &--condensed {
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  &__sub-headline {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,75 @@
+/*------------------------------------*\
+  #SITE-MENU
+\*------------------------------------*/
+
+.site-menu {
+  width: 0;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+
+  &__wrapper {
+    padding: {
+      right: 9.2rem;
+    }
+  }
+
+  &__nav {
+    margin: {
+      bottom: 100px;
+    }
+  }
+
+  &__contact {
+    margin: {
+      bottom: 50px;
+    }
+    a {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      font-weight: 500;
+      color: #222222;
+    }
+  }
+
+  &__hire {
+    span {
+      display: block;
+      font-style: italic;
+    }
+    a {
+      color: #222222;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 45vh;
+    height: 100vh;
+    background-image: url(../images/menu-image.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    div {
+      background: #fff;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      left: 0;
+    }
+  }
+}

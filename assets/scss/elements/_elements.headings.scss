@@ -1,0 +1,43 @@
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+/**
+ * Simple default styles for headings 1 through 6.
+ */
+
+h1 {
+  font-size: $global-h1-font-size;
+  line-height: $global-h1-line-height;
+  font-weight: $global-h1-font-weight;
+}
+
+h2 {
+  font-size: $global-h2-font-size;
+  line-height: $global-h2-line-height;
+  font-weight: $global-h2-font-weight;
+}
+
+h3 {
+  font-size: $global-h3-font-size;
+  line-height: $global-h3-line-height;
+  font-weight: $global-h3-font-weight;
+}
+
+h4 {
+  font-size: $global-h4-font-size;
+  line-height: $global-h4-line-height;
+  font-weight: $global-h4-font-weight;
+}
+
+h5 {
+  font-size: $global-h5-font-size;
+  line-height: $global-h5-line-height;
+  font-weight: $global-h5-font-weight;
+}
+
+h6 {
+  font-size: $global-h6-font-size;
+  line-height: $global-h6-line-height;
+  font-weight: $global-h6-font-weight;
+}

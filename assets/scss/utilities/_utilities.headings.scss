@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+.u-h1 {
+  @include font-size($font-size-h1, $global-h1-line-height, $global-h1-letter-spacing);
+  @include font-family(headings);
+  @include font-weight($global-h1-font-weight);
+  margin-bottom: $global-h1-margin-bottom;
+}
+
+.u-h2 {
+  @include font-size($font-size-h2, $global-h2-line-height, $global-h2-letter-spacing);
+  @include font-family(headings);
+  @include font-weight($global-h2-font-weight);
+  margin-bottom: $global-h2-margin-bottom;
+}
+
+.u-h3 {
+  @include font-size($font-size-h3, $global-h3-line-height, $global-h3-letter-spacing);
+  @include font-family(headings);
+  @include font-weight($global-h3-font-weight);
+  margin-bottom: $global-h3-margin-bottom;
+}
+
+.u-h4 {
+  @include font-size($font-size-h4, $global-h4-line-height, $global-h4-letter-spacing);
+  @include font-family(headings);
+  @include font-weight($global-h4-font-weight);
+  margin-bottom: $global-h4-margin-bottom;
+}
+
+.u-h5 {
+  @include font-size($font-size-h5, $global-h5-line-height, $global-h5-letter-spacing);
+  @include font-family(headings);
+  @include font-weight($global-h5-font-weight);
+  margin-bottom: $global-h5-margin-bottom;
+}
+
+.u-h6 {
+  @include font-size($font-size-h6, $global-h6-line-height, $global-h6-letter-spacing);
+  @include font-family(headings);
+  @include font-weight($global-h6-font-weight);
+  margin-bottom: $global-h6-margin-bottom;
+}

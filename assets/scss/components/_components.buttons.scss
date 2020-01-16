@@ -1,0 +1,121 @@
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
+ */
+
+.btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  overflow: visible; /* [6] */
+  padding: $btn-padding-vertical - $btn-border-width $btn-padding-horizontal - $btn-border-width; /* [7] */
+  line-height: normal;
+  text-transform: capitalize;
+  transition: $global-transition;
+
+  @if($btn-border-width != 0) {
+    border: $btn-border-width $btn-border-style;
+  } @else {
+    border: none; /* [4] */
+  }
+
+  @if($btn-radius != 0) {
+    border-radius: $btn-radius;
+  }
+
+  @include hocus() {
+    text-decoration: none;
+  }
+
+  /**
+   * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+   */
+   &::-moz-focus-inner {
+    border:  0;
+    padding: 0;
+  }
+
+  &--link {
+    all: unset;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    > .btn__icon {
+      margin-left: 1.7rem;
+      font-size: 1.9rem;
+
+      > i {
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: box-shadow .3s ease-in-out;
+    color: #110f10;
+    background-color: #fff;
+    box-shadow: 0 0 0 0px #fff;
+  }
+}
+/* Style variants
+   ========================================================================== */
+
+.c-btn--primary {
+  background-color: $color-btn-background;
+             color: $color-btn;
+  transition: $global-transition;
+
+  @include hocus() {
+    background-color: $color-btn-background-hover;
+  }
+
+  /*.t-red & {
+    background-color: $color-theme-red; // todo: introduce themes
+  } */
+
+}
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+  padding: $btn-padding-vertical--small - $btn-border-width $btn-padding-horizontal--small - $btn-border-width;
+  font-size: $btn-font-size--small;
+  letter-spacing: $btn-letter-spacing--small;
+}
+
+.c-btn--large {
+  padding: $global-spacing-unit $global-spacing-unit-large;
+}
+
+.c-btn--full {
+  width: 100%;
+}

@@ -1,0 +1,64 @@
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+
+/*
+ * 1. Set html font size to 62.5% so all REM measurements are
+ *    based on a 10px sizing. So basically 1.4rem = 14px.
+ * 2. Ensure the page always fills at least the entire height of viewport.
+ */
+
+html {
+  font-size: 62.5%; /* [1] */
+  min-height: 100%; /* [2] */
+}
+
+$scrollbarBG: rgba(0,0,0, .15);
+$thumbBG: rgba(255,255,255,.66);
+
+body {
+  font-size: $global-base-font-size;
+  line-height: $global-base-line-height;
+  font-weight: $global-base-font-weight;
+  @include font-family(sans-serif);
+  background-color: $color-page-background;
+  color: $color-page-text;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  font-feature-settings: "liga" on;
+  scrollbar-width: thin;
+  scrollbar-color: $thumbBG $scrollbarBG;
+
+  // &.menu-open {
+  //   overflow: hidden;
+  // }
+
+  @media(max-width: 580px) {
+    font-size: $global-base-mobile-font-size;
+    line-height: $global-base-mobile-line-height;
+  }
+  &::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbarBG;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumbBG;
+    border-radius: 6px;
+  }
+}
+
+::selection {
+  background: transparent;
+  color: #35BEF2;
+}
+
+::-moz-selection {
+  background: transparent;
+  color: #35BEF2;
+}

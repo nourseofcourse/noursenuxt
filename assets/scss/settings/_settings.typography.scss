@@ -1,0 +1,71 @@
+// Typography - others found in global settings
+$sans-serif-font-family: "Roboto";
+$serif-font-family: "Georgia";
+$headings-font-family: $sans-serif-font-family;
+$font-family-base: $sans-serif-font-family;
+
+$font-size-h1: 8rem !default;
+$font-size-h2: 32px !default;
+$font-size-h3: 14px !default;
+$font-size-h4: 20px !default;
+$font-size-h5: 18px !default;
+$font-size-h6: 16px !default;
+
+// Base
+$global-base-font-size: 1.6rem !default;
+$global-base-line-height: 3.2rem !default;
+$global-base-font-weight: 400 !default;
+$global-base-mobile-font-size: 1.4rem;
+$global-base-mobile-line-height: 2.66rem;
+
+// Eyebrow
+$global-eyebrow-font-size: 1.4rem !default;
+$global-eyebrow-line-height: 1.65rem !default;
+$global-eyebrow-letter-spacing: .16rem !default;
+$global-eyebrow-font-weight: 400 !default;
+
+// Masthead
+$global-masthead-max-font-size: 8rem !default;
+$global-masthead-font-size: 7vw !default;
+$global-masthead-max-line-height: 9.6rem !default;
+$global-masthead-line-height: 8.1vw !default;
+$global-masthead-letter-spacing: -.16rem !default;
+$global-masthead-font-weight: 300 !default;
+
+// Heading 1
+$global-h1-font-size: 3.8rem !default;
+$global-h1-line-height: 4.6rem !default;
+$global-h1-letter-spacing: default !default;
+$global-h1-font-weight: 400 !default;
+
+// Heading 2
+$global-h2-font-size: 3.2rem !default;
+$global-h2-line-height: 4.16rem !default;
+$global-h2-letter-spacing: default !default;
+$global-h2-font-weight: 400 !default;
+$global-h2-mobile-font-size: 2.66rem;
+$global-h2-mobile-line-height: 3.2rem;
+
+// Heading 3
+$global-h3-font-size: 2.7rem !default;
+$global-h3-line-height: 3.3rem !default;
+$global-h3-letter-spacing: default !default;
+$global-h3-font-weight: 500 !default;
+
+// Heading 4
+$global-h4-font-size: 2.1rem !default;
+$global-h4-line-height: 2.5rem !default;
+$global-h4-letter-spacing: default !default;
+$global-h4-font-weight: 500 !default;
+
+// Heading 5
+$global-h5-font-size: 2.7rem !default;
+$global-h5-line-height: 3.2rem !default;
+$global-h5-letter-spacing: default !default;
+$global-h5-font-weight: 400 !default;
+
+// Heading 6
+$global-h6-font-size: 2rem !default;
+$global-h6-line-height: 2.4rem !default;
+$global-h6-letter-spacing: default !default;
+$global-h6-font-weight: 500 !default;

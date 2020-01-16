@@ -1,0 +1,152 @@
+/*------------------------------------*\
+  #SITE-HEAD
+\*------------------------------------*/
+
+.site-head {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: {
+    left: 6rem;
+    right: 6rem;
+  }
+
+  &.headroom--not-top {
+    background-color: #202020;
+  }
+}
+
+.site-head--fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+$barWidth: 40px !default;
+$barHeight: 4px !default;
+$barOffset: -10px !default;
+
+$menuHeight: 20px;
+$barWidth: 32px;
+$barHeight: 2px;
+$barOffset: -8px;
+
+.site-head__toggle {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: auto; /* [1] */
+  overflow: visible;
+  z-index: 99;
+  height: 40px;
+  padding: 10px 0 10px 10px;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+
+  &.is-disabled {
+    pointer-events: none;
+  }
+
+  .outer {
+    position: relative;
+    display: inline-block;
+    width: $barWidth;
+    height: $menuHeight;
+  }
+
+  .inner {
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -2px;
+    width: 21px;
+    height: $barHeight;
+    // transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    // transition-duration: 75ms;
+    // transition-property: transform;
+    transition: transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19),
+      width 0.3s ease;
+    border-radius: 4px;
+    background-color: #fff;
+
+    &:before,
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: $barWidth;
+      height: $barHeight;
+      transition-timing-function: ease;
+      transition-duration: 0.15s;
+      transition-property: transform;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+
+    &:before {
+      top: $barOffset;
+      transition: top 75ms ease 0.12s, opacity 75ms ease, width 0.3s ease;
+      width: 27px;
+    }
+
+    &:after {
+      bottom: $barOffset;
+      transition: bottom 75ms ease 0.12s,
+        transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.3s ease;
+    }
+  }
+
+  &.is-open {
+    .inner {
+      transition-delay: 0.12s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: rotate(45deg);
+      background-color: #202020;
+      width: $barWidth;
+      &:before {
+        top: 0;
+        transition: top 75ms ease, opacity 75ms ease 0.12s;
+        opacity: 0;
+        background-color: #202020;
+        width: $barWidth;
+      }
+
+      &:after {
+        bottom: 0;
+        transition: bottom 75ms ease,
+          transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+        transform: rotate(-90deg);
+        background-color: #202020;
+      }
+    }
+  }
+
+  &:not(.is-open) {
+    &:hover {
+      .inner {
+        width: 32px;
+        &:before {
+          width: 21px;
+        }
+        &:after {
+          width: 27px;
+        }
+      }
+    }
+  }
+}
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear, background-color .3s ease-in;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+}

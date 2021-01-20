@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@vivid-web/flexboxgrid-vue": "^1.0.5",
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "headroom.js": "^0.10.3",
     "jarallax": "^1.12.0",
     "jquery": "^3.4.1",

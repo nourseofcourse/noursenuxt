@@ -18,7 +18,7 @@
     "jarallax": "^1.12.0",
     "jquery": "^3.4.1",
     "nuxt": "^2.0.0",
-    "swiper": "^5.2.1",
+    "swiper": "^6.5.1",
     "vue-scrollmagic": "^1.2.0"
   },
   "devDependencies": {
